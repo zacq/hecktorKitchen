@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  --color-brand-orange: #FF6B35;
+  --color-brand-cream: #FDFBF7;
+  --color-brand-brown: #4A3728;
+  --color-brand-soft-orange: #FFF1EB;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-brown font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 shadow-lg shadow-brand-orange/20;
+}
+
+.btn-secondary {
+  @apply bg-white text-brand-brown px-8 py-4 rounded-full font-bold text-lg border border-brand-brown/10 hover:bg-brand-soft-orange transition-colors;
+}
